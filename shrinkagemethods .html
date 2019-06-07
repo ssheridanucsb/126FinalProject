@@ -13691,7 +13691,7 @@ The penalty coefficient is 0.0091
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Lasso regression chooses $\hat{\beta}$ to minimize $(y-X\beta)^{T}(y-X\beta)$  subject to $\Sigma_{j=1}^{p}|\beta_j|\leq t$. This penalty may go to zero, removing predictors from the model and in effect grabbing the predictors you want with a metaphorical "lasso". Lasso regression is most applicable when the model is believed to be sparse; the response can be explained by a small number of predictors with the rest having no effect. <strong>LassoLarsIC</strong> chooses a hyperparameter, and thus model based on AIC or BIC. The larger the parameter the more predictors are removed.</p>
+<p>Lasso regression chooses $\hat{\beta}$ to minimize $(y-X\beta)^{T}(y-X\beta)$  subject to $\Sigma_{j=1}^{p}|\beta_j|\leq t$. This penalty may go to zero, removing predictors from the model and in effect grabbing the predictors you want with a metaphorical "lasso". Lasso regression is most applicable when the model is believed to be sparse; the response can be explained by a small number of predictors with the rest having no effect. <strong>LassoLarsIC</strong> chooses a hyperparameter, and thus model based on AIC or BIC. The larger the parameter the more predictors are removed. Information criterion is used over cross validation because cross validation maximizes prediction accuracy without accounting for model complexity.</p>
 
 </div>
 </div>
@@ -14167,7 +14167,7 @@ The BIC model used 3 predictors
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The lasso regression with BIC criterion effectively reduced the size of the model while maintaining prediction accuracy. The lasso regression also out-performed the smaller OLS models from the initial project using the same number of predictors. Lasso Regression proved to be an effective shrinkage method on the data set. Ridge regression greatly penalized unnecessary predictors in the model but is unable to fully remove them. The predictors form the ridge regression with the smallest coefficients could be dropped to reduce dimensionality.</p>
+<p>The lasso regression with BIC criterion effectively reduced the size of the model while maintaining prediction accuracy. The lasso regression also out-performed the smaller OLS models from the initial project using the same number of predictors. Lasso Regression proved to be an effective shrinkage method on the data set. Ridge regression greatly penalized unnecessary predictors in the model but is unable to fully remove them. The predictors from the ridge regression with the smallest coefficients could be dropped to reduce dimensionality.</p>
 <p>While OLS models are generally more interpretable, the regularized regressions are often much better for prediction as they prevent overfitting and provide a means for choosing a smaller model. Lasso regressions are also far more effective on sparse models than OLS models.</p>
 
 </div>
@@ -14277,7 +14277,7 @@ The average OLS model&#39;s MSE is 2.354
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Lasso-model-performs-far-better-than-OLS-on-sparse-data-sets">The Lasso model performs far better than OLS on sparse data sets<a class="anchor-link" href="#The-Lasso-model-performs-far-better-than-OLS-on-sparse-data-sets">&#182;</a></h2><h3 id="This-is-shown-in-the-following-histograms">This is shown in the following histograms<a class="anchor-link" href="#This-is-shown-in-the-following-histograms">&#182;</a></h3><p>Because R^2 is computed on testing data, it can be negative and arbitrarily small</p>
+<h2 id="The-Lasso-model-performs-far-better-than-OLS-on-sparse-data-sets">The Lasso model performs far better than OLS on sparse data sets<a class="anchor-link" href="#The-Lasso-model-performs-far-better-than-OLS-on-sparse-data-sets">&#182;</a></h2><h3 id="This-is-shown-in-the-following-histograms">This is shown in the following histograms<a class="anchor-link" href="#This-is-shown-in-the-following-histograms">&#182;</a></h3><p>Note: because R^2 is computed on testing data, it can be negative and arbitrarily small to indicate a worse model.</p>
 
 </div>
 </div>
